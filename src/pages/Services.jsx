@@ -1,6 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaRocket, FaChartLine, FaLightbulb, FaCog, FaUsers, FaShieldAlt, FaGlobe, FaMobile, FaCloudUploadAlt } from 'react-icons/fa';
+import {
+  FaBuilding,
+  FaHotel,
+  FaCar,
+  FaMotorcycle,
+  FaHandHoldingUsd,
+  FaCogs,
+  FaHammer,
+  FaWarehouse,
+  FaShip,
+  FaPlane,
+  FaStore,
+  FaRegHandshake
+} from 'react-icons/fa';
 
 const ServiceCard = ({ icon, title, description, index }) => (
   <motion.div
@@ -19,15 +32,18 @@ const ServiceCard = ({ icon, title, description, index }) => (
 
 const Services = () => {
   const services = [
-    { icon: <FaRocket />, title: "Enterprise Innovation", description: "Cutting-edge e-commerce technologies and AI-driven solutions to propel your business into the future of retail." },
-    { icon: <FaChartLine />, title: "Advanced Analytics", description: "Comprehensive big data analysis and machine learning algorithms to drive informed business decisions and predict market trends." },
-    { icon: <FaLightbulb />, title: "Strategic Consulting", description: "Expert advice from industry leaders to optimize your global e-commerce strategy and maximize performance across markets." },
-    { icon: <FaCog />, title: "Custom Development", description: "Tailored enterprise-level e-commerce solutions designed to meet the complex needs of large-scale operations." },
-    { icon: <FaUsers />, title: "User Experience Design", description: "Creating intuitive, engaging, and personalized shopping experiences to delight customers and drive conversions." },
-    { icon: <FaShieldAlt />, title: "Enterprise Security", description: "State-of-the-art security measures and compliance solutions to protect your business and customers on a global scale." },
-    { icon: <FaGlobe />, title: "Global Expansion", description: "Comprehensive strategies and technologies for seamless international market entry and multi-currency, multi-language operations." },
-    { icon: <FaMobile />, title: "Omnichannel Integration", description: "Unified commerce solutions that seamlessly connect online, mobile, and in-store experiences for a cohesive brand journey." },
-    { icon: <FaCloudUploadAlt />, title: "Cloud Infrastructure", description: "Scalable, high-performance cloud solutions engineered to handle massive transaction volumes and peak demands." },
+    { icon: <FaBuilding />, title: "Real Estate", description: "Offering premium properties for residential, commercial, and industrial use, tailored to your needs." },
+    { icon: <FaHotel />, title: "Tourism", description: "Providing exceptional travel experiences with top-notch hospitality services across various destinations." },
+    { icon: <FaCar />, title: "Car Sales", description: "Delivering a wide range of high-quality vehicles with excellent customer service and competitive pricing." },
+    { icon: <FaMotorcycle />, title: "Scooter Sales", description: "Offering a variety of scooters to meet your mobility needs, combining style, efficiency, and affordability." },
+    { icon: <FaHandHoldingUsd />, title: "Financial Services", description: "Providing financial solutions including loans, investment advice, and wealth management." },
+    { icon: <FaCogs />, title: "Custom Solutions", description: "Tailoring services and products to meet specific client needs across various sectors for optimal performance." },
+    { icon: <FaHammer />, title: "Construction", description: "Expert construction services for residential and commercial projects, ensuring quality and durability." },
+    { icon: <FaWarehouse />, title: "Logistics", description: "Efficient logistics and warehousing solutions to streamline your supply chain and distribution needs." },
+    { icon: <FaShip />, title: "Maritime Services", description: "Comprehensive maritime services including shipping, chartering, and marine consultancy." },
+    { icon: <FaPlane />, title: "Aviation Services", description: "Offering a range of aviation services including air charter, cargo handling, and aviation consultancy." },
+    { icon: <FaStore />, title: "Retail", description: "Operating retail stores offering a variety of products to meet your everyday needs." },
+    { icon: <FaRegHandshake />, title: "Consultancy", description: "Providing expert consultancy services across various industries to help you achieve your business goals." },
   ];
 
   return (
@@ -39,7 +55,7 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Enterprise E-Commerce Services
+          Comprehensive Services for Every Industry
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (

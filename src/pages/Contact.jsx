@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaTwitter, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -105,32 +105,34 @@ const Contact = () => {
               <div className="mt-6 space-y-4">
                 <div className="flex items-center">
                   <FaEnvelope className="text-indigo-600 dark:text-indigo-400 mr-3" />
-                  <span className="text-gray-700 dark:text-gray-300">contact@example.com</span>
+                  <span className="text-gray-700 dark:text-gray-300">contact@abdelazizgroup.com</span>
                 </div>
                 <div className="flex items-center">
                   <FaPhone className="text-indigo-600 dark:text-indigo-400 mr-3" />
-                  <span className="text-gray-700 dark:text-gray-300">+1 (555) 123-4567</span>
+                  <span className="text-gray-700 dark:text-gray-300">(123) 456-7890</span>
                 </div>
                 <div className="flex items-center">
                   <FaMapMarkerAlt className="text-indigo-600 dark:text-indigo-400 mr-3" />
-                  <span className="text-gray-700 dark:text-gray-300">123 Web Street, Internet City, 12345</span>
+                  <span className="text-gray-700 dark:text-gray-300">123 E-commerce St, Shopsville, Shopland</span>
                 </div>
               </div>
             </div>
+
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Location</h3>
-              <div className="aspect-w-16 aspect-h-9">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095919604!2d-74.00425878428698!3d40.71256494500643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1643fc9f0f%3A0x9a4d90cbe7b73b53!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sca!4v1659580699744!5m2!1sen!2sca"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Our Location"
-                  className="rounded-lg shadow-md"
-                ></iframe>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Follow Us</h3>
+              <div className="mt-6 space-y-4">
+                <div className="flex items-center">
+                  <FaTwitter className="text-indigo-600 dark:text-indigo-400 mr-3" />
+                  <span className="text-gray-700 dark:text-gray-300">@abdelazizgroup</span>
+                </div>
+                <div className="flex items-center">
+                  <FaFacebookF className="text-indigo-600 dark:text-indigo-400 mr-3" />
+                  <span className="text-gray-700 dark:text-gray-300">/abdelazizgroup</span>
+                </div>
+                <div className="flex items-center">
+                  <FaLinkedinIn className="text-indigo-600 dark:text-indigo-400 mr-3" />
+                  <span className="text-gray-700 dark:text-gray-300">/company/abdelazizgroup</span>
+                </div>
               </div>
             </div>
           </motion.div>

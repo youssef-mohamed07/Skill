@@ -21,8 +21,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-3xl font-bold tracking-tight hover:text-pink-300 transition duration-300 transform hover:scale-110">
-            <span className="animate-pulse">Your</span> 
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500">Logo</span>
+            <span className="animate-pulse">Abdelaziz</span> 
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500">Morsy</span>
           </Link>
           
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 rounded-md hover:bg-white hover:text-purple-600 transition duration-300">

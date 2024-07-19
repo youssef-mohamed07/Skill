@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaRocket, FaUsers, FaLightbulb, FaClock } from 'react-icons/fa';
+import { FaOilCan, FaNetworkWired, FaLightbulb, FaClock, FaBuilding, FaUsersCog, FaChalkboardTeacher, FaTruck } from 'react-icons/fa';
 
 const FeatureCard = ({ icon, title, description }) => (
   <motion.div 
@@ -16,10 +16,14 @@ const FeatureCard = ({ icon, title, description }) => (
 
 function About() {
   const features = [
-    { icon: <FaRocket />, title: "Innovation", description: "Pushing the boundaries of e-commerce technology." },
-    { icon: <FaUsers />, title: "Customer-Centric", description: "Putting our clients' needs at the forefront of everything we do." },
+    { icon: <FaOilCan />, title: "Oil and Gas Extraction", description: "Leading the industry with innovative oil and gas extraction methods." },
+    { icon: <FaNetworkWired />, title: "Communications and IT", description: "Providing cutting-edge technology solutions." },
     { icon: <FaLightbulb />, title: "Creative Solutions", description: "Thinking outside the box to solve complex challenges." },
     { icon: <FaClock />, title: "Timely Delivery", description: "Committed to delivering projects on time, every time." },
+    { icon: <FaBuilding />, title: "Commercial Centers", description: "Developing and managing modern commercial centers." },
+    { icon: <FaUsersCog />, title: "Administrative Services", description: "Offering top-notch administrative and personal services." },
+    { icon: <FaChalkboardTeacher />, title: "Education", description: "Empowering the future through quality education services." },
+    { icon: <FaTruck />, title: "Logistics Services", description: "Providing efficient and reliable logistics solutions." },
   ];
 
   return (
@@ -42,7 +46,7 @@ function About() {
         >
           <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">Our Mission</h2>
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            At [Your Company Name], we're dedicated to revolutionizing the e-commerce landscape through innovative solutions and cutting-edge technology. Our mission is to empower businesses of all sizes to thrive in the digital marketplace, providing them with the tools and expertise they need to succeed.
+            At Abdelaziz Abbas Morsy Trading SPC, we're committed to pushing the boundaries of our diverse sectors, from oil and gas extraction to communications, education, and logistics. Our mission is to drive innovation and provide exceptional services across all our business areas, ensuring the utmost satisfaction and success for our clients.
           </p>
         </motion.div>
 

@@ -23,8 +23,11 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="text-center md:text-left"
           >
-            <h3 className="text-2xl font-bold mb-4">Your Company</h3>
+            <h3 className="text-2xl font-bold mb-4">Abdelaziz Abbas Morsy Trading SPC</h3>
             <p className="mb-4">Innovative solutions for a digital world</p>
+            <p className="mb-4">P.O. Box 111968, Muscat</p>
+            <p className="mb-4">Phone: 96611253</p>
+            <p className="mb-4">Email: 123aa90101077aa@gmail.com</p>
             <div className="flex justify-center md:justify-start space-x-4">
               {socialLinks.map((link, index) => (
                 <motion.a
@@ -48,12 +51,19 @@ const Footer = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
-                <motion.li key={index} whileHover={{ scale: 1.05 }}>
-                  <a href="#" className={`hover:underline ${isDarkMode ? 'hover:text-purple-400' : 'hover:text-purple-600'}`}>{item}</a>
-                </motion.li>
-              ))}
-            </ul>
+  <motion.li key="home" whileHover={{ scale: 1.05 }}>
+    <a href="/" className={`hover:underline ${isDarkMode ? 'hover:text-purple-400' : 'hover:text-purple-600'}`}>Home</a>
+  </motion.li>
+  <motion.li key="about" whileHover={{ scale: 1.05 }}>
+    <a href="/about" className={`hover:underline ${isDarkMode ? 'hover:text-purple-400' : 'hover:text-purple-600'}`}>About Us</a>
+  </motion.li>
+  <motion.li key="services" whileHover={{ scale: 1.05 }}>
+    <a href="/services" className={`hover:underline ${isDarkMode ? 'hover:text-purple-400' : 'hover:text-purple-600'}`}>Services</a>
+  </motion.li>
+  <motion.li key="contact" whileHover={{ scale: 1.05 }}>
+    <a href="/contact" className={`hover:underline ${isDarkMode ? 'hover:text-purple-400' : 'hover:text-purple-600'}`}>Contact Us</a>
+  </motion.li>
+</ul>
           </motion.div>
           
           <motion.div 
@@ -88,7 +98,7 @@ const Footer = () => {
           className="mt-8 pt-8 border-t border-gray-700 text-center"
         >
           <p>
-            &copy; {new Date().getFullYear()} Your Company. All rights reserved. 
+            &copy; {new Date().getFullYear()} Abdelaziz Abbas Morsy Trading SPC. All rights reserved. 
             <br />
             Made with <FaHeart className="inline-block text-red-500 animate-pulse" /> by Our Amazing Team
           </p>
