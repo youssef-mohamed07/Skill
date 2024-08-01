@@ -15,12 +15,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log(formData);
   };
 
   return (
-    <section className="bg-gray-100 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-b from-orange-600 to-red-600 dark:from-gray-900 dark:to-orange-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,12 +27,12 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl">
-            <span className="block">Get in Touch</span>
-            <span className="block text-indigo-600 dark:text-indigo-400">We'd love to hear from you</span>
+          <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
+            <span className="block">اتصل بنا</span>
+            <span className="block text-yellow-400">نحن نتطلع لسماع منك</span>
           </h2>
-          <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">
-            Have a question or want to work together?
+          <p className="mt-4 text-xl text-white">
+            هل لديك سؤال أو ترغب في العمل معنا؟
           </p>
         </motion.div>
 
@@ -45,50 +44,50 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Name
+                <label htmlFor="name" className="block text-sm font-medium text-white">
+                  الاسم
                 </label>
                 <input
                   type="text"
                   name="name"
                   id="name"
                   required
-                  className="mt-1 block w-full py-2 px-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 dark:text-white"
+                  className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 text-gray-900"
                   onChange={handleChange}
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Email
+                <label htmlFor="email" className="block text-sm font-medium text-white">
+                  البريد الإلكتروني
                 </label>
                 <input
                   type="email"
                   name="email"
                   id="email"
                   required
-                  className="mt-1 block w-full py-2 px-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 dark:text-white"
+                  className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 text-gray-900"
                   onChange={handleChange}
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Message
+                <label htmlFor="message" className="block text-sm font-medium text-white">
+                  الرسالة
                 </label>
                 <textarea
                   name="message"
                   id="message"
                   rows="4"
                   required
-                  className="mt-1 block w-full py-2 px-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 dark:text-white"
+                  className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 text-gray-900"
                   onChange={handleChange}
                 ></textarea>
               </div>
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-3 px-5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
+                  className="w-full flex justify-center py-3 px-5 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-900 bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition duration-150 ease-in-out"
                 >
-                  Send Message
+                  إرسال الرسالة
                 </button>
               </div>
             </form>
@@ -101,37 +100,37 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-white">معلومات الاتصال</h3>
               <div className="mt-6 space-y-4">
                 <div className="flex items-center">
-                  <FaEnvelope className="text-indigo-600 dark:text-indigo-400 mr-3" />
-                  <span className="text-gray-700 dark:text-gray-300">contact@abdelazizgroup.com</span>
+                  <FaEnvelope className="text-yellow-400 ml-3" />
+                  <span className="text-white">contact@abdelazizgroup.com</span>
                 </div>
                 <div className="flex items-center">
-                  <FaPhone className="text-indigo-600 dark:text-indigo-400 mr-3" />
-                  <span className="text-gray-700 dark:text-gray-300">(123) 456-7890</span>
+                  <FaPhone className="text-yellow-400 ml-3" />
+                  <span className="text-white">(123) 456-7890</span>
                 </div>
                 <div className="flex items-center">
-                  <FaMapMarkerAlt className="text-indigo-600 dark:text-indigo-400 mr-3" />
-                  <span className="text-gray-700 dark:text-gray-300">123 E-commerce St, Shopsville, Shopland</span>
+                  <FaMapMarkerAlt className="text-yellow-400 ml-3" />
+                  <span className="text-white">123 شارع التجارة الإلكترونية، المدينة، المملكة</span>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Follow Us</h3>
+              <h3 className="text-2xl font-bold text-white">تابعنا</h3>
               <div className="mt-6 space-y-4">
                 <div className="flex items-center">
-                  <FaTwitter className="text-indigo-600 dark:text-indigo-400 mr-3" />
-                  <span className="text-gray-700 dark:text-gray-300">@abdelazizgroup</span>
+                  <FaTwitter className="text-yellow-400 ml-3" />
+                  <span className="text-white">@abdelazizgroup</span>
                 </div>
                 <div className="flex items-center">
-                  <FaFacebookF className="text-indigo-600 dark:text-indigo-400 mr-3" />
-                  <span className="text-gray-700 dark:text-gray-300">/abdelazizgroup</span>
+                  <FaFacebookF className="text-yellow-400 ml-3" />
+                  <span className="text-white">/abdelazizgroup</span>
                 </div>
                 <div className="flex items-center">
-                  <FaLinkedinIn className="text-indigo-600 dark:text-indigo-400 mr-3" />
-                  <span className="text-gray-700 dark:text-gray-300">/company/abdelazizgroup</span>
+                  <FaLinkedinIn className="text-yellow-400 ml-3" />
+                  <span className="text-white">/company/abdelazizgroup</span>
                 </div>
               </div>
             </div>
