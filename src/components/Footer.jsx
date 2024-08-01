@@ -1,78 +1,91 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaHeart } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub, FaDribbble } from 'react-icons/fa';
 import { DarkModeContext } from '../DarkModeContext';
 
-const Footer = () => {
-  const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
-
-  const socialLinks = [
-    { icon: FaFacebookF, url: '#' },
-    { icon: FaTwitter, url: '#' },
-    { icon: FaInstagram, url: '#' },
-    { icon: FaLinkedinIn, url: '#' },
-  ];
+export default function Footer() {
+  const { isDarkMode } = useContext(DarkModeContext);
 
   return (
-    <footer className={`bg-blue-600 dark:bg-gray-800 text-white py-8 transition-all duration-500 ease-in-out`}>
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-4">Jeddah</h3>
-            <p className="mb-4">Innovative solutions for a digital world</p>
-            <p className="mb-4">P.O. Box 111968, Muscat</p>
-            <p className="mb-4">Phone: 96611253</p>
-            <p className="mb-4">Email: 123aa90101077aa@gmail.com</p>
-            <div className="flex justify-center md:justify-start space-x-4">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  className="text-xl hover:text-gray-300 transition duration-300"
-                >
-                  <link.icon />
+    <footer className={`lg:grid lg:grid-cols-5 ${isDarkMode ? 'bg-gray-800 text-gray-100' : 'bg-white text-gray-900'}`} dir="rtl">
+      <div className="relative block h-32 lg:col-span-2 lg:h-full">
+        <img
+          src="footer_picture.jpg"
+          alt="Footer Image"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      </div>
+
+      <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <div>
+            <p>
+              <span className="text-xs uppercase tracking-wide text-gray-500">إتصل بنا</span>
+              <a href="tel:0123456789" className="block text-2xl font-medium hover:opacity-75 sm:text-3xl">
+                0123456789
+              </a>
+            </p>
+
+            <ul className="mt-8 space-y-1 text-sm">
+              <li>الإثنين إلي الجمعة: 10ص - 5م</li>
+              <li>نهاية الأسبوع: 10ص - 3م</li>
+            </ul>
+
+            <ul className="mt-8 flex gap-6">
+              <li>
+                <a href="https://facebook.com" rel="noreferrer" target="_blank" className="transition hover:opacity-75">
+                  <span className="sr-only">Facebook</span>
+                  <FaFacebook className="h-6 w-6" />
                 </a>
-              ))}
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link to="/" className="hover:underline">Home</Link></li>
-              <li><Link to="/about" className="hover:underline">About Us</Link></li>
-              <li><Link to="/services" className="hover:underline">Services</Link></li>
-              <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
+              </li>
+              <li>
+                <a href="https://instagram.com" rel="noreferrer" target="_blank" className="transition hover:opacity-75">
+                  <span className="sr-only">Instagram</span>
+                  <FaInstagram className="h-6 w-6" />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com" rel="noreferrer" target="_blank" className="transition hover:opacity-75">
+                  <span className="sr-only">Twitter</span>
+                  <FaTwitter className="h-6 w-6" />
+                </a>
+              </li>
             </ul>
           </div>
-          
-          <div className="text-center md:text-right">
-            <h3 className="text-2xl font-bold mb-4">Newsletter</h3>
-            <p className="mb-4">Stay updated with our latest news</p>
-            <div className="flex flex-col sm:flex-row justify-center md:justify-end space-y-2 sm:space-y-0 sm:space-x-2">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className={`px-4 py-2 rounded-full focus:outline-none ${isDarkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-900'}`}
-              />
-              <button className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition duration-300">
-                Subscribe
-              </button>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <p className="font-medium">الخدمات</p>
+              <ul className="mt-6 space-y-4 text-sm">
+                <li><a href="#" className="transition hover:opacity-75">خدمة 1</a></li>
+                <li><a href="#" className="transition hover:opacity-75">خدمة 2</a></li>
+                <li><a href="#" className="transition hover:opacity-75">خدمة 3</a></li>
+                <li><a href="#" className="transition hover:opacity-75">خدمة 4</a></li>
+                <li><a href="#" className="transition hover:opacity-75">خدمة 5</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-medium">الشركة</p>
+              <ul className="mt-6 space-y-4 text-sm">
+                <li><a href="#" className="transition hover:opacity-75">حول</a></li>
+                <li><a href="#" className="transition hover:opacity-75">تواصل معنا</a></li>
+                <li><a href="#" className="transition hover:opacity-75">آراء العملاء</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        
-        <div className="mt-8 pt-8 border-t text-center">
-          <p>
-            &copy; {new Date().getFullYear()} Jeddah. All rights reserved. 
-            <br />
-            Made with <FaHeart className="inline-block text-red-500" /> by Our Amazing Team
-          </p>
-          
+
+        <div className="mt-12 border-t pt-12">
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <ul className="flex flex-wrap gap-4 text-xs">
+              <li><a href="#" className="transition hover:opacity-75">البنود والظروف</a></li>
+              <li><a href="#" className="transition hover:opacity-75">سياسة الخصوصية</a></li>
+              <li><a href="#" className="transition hover:opacity-75">ملفات تعريف الارتباط</a></li>
+            </ul>
+            <p className="mt-8 text-xs sm:mt-0">&copy; 2024. مؤسسة الماسة - جميع الحقوق محفوظة</p>
+          </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
