@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { FaSun, FaMoon, FaHome, FaTools, FaProjectDiagram, FaInfoCircle, FaEnvelope, FaSignInAlt, FaUserPlus, FaDollarSign } from 'react-icons/fa';
+import { FaHome,FaSun,FaMoon, FaTools, FaProjectDiagram, FaInfoCircle, FaEnvelope, FaSignInAlt, FaUserPlus } from 'react-icons/fa';
 import { DarkModeContext } from '../DarkModeContext';
 
 const Header = () => {
@@ -11,21 +11,19 @@ const Header = () => {
     { name: 'Home', icon: FaHome, link: '/' },
     { name: 'Services', icon: FaTools, link: '/services' },
     { name: 'Projects', icon: FaProjectDiagram, link: '/projects' },
-    { name: 'Pricing', icon: FaDollarSign, link: '/pricing' },
     { name: 'About', icon: FaInfoCircle, link: '/about' },
     { name: 'Contact', icon: FaEnvelope, link: '/contact' },
   ];
 
   return (
-    <header className="bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-gray-900 dark:to-purple-900 text-white py-4 shadow-lg transition-all duration-500 ease-in-out">
+    <header className="bg-blue-600 dark:bg-gray-800 text-white py-4 shadow-lg transition-all duration-500 ease-in-out">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-3xl font-bold tracking-tight hover:text-pink-300 transition duration-300 transform hover:scale-110">
-            <span className="animate-pulse">Abdelaziz</span> 
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500">Morsy</span>
+          <Link to="/" className="text-3xl font-bold tracking-tight hover:text-gray-300 transition duration-300">
+            Jeddah Furniture
           </Link>
           
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 rounded-md hover:bg-white hover:text-purple-600 transition duration-300">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 rounded-md hover:bg-gray-700 transition duration-300">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -34,9 +32,9 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.name}m
                 to={item.link}
-                className="flex items-center hover:bg-white hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300 transform hover:scale-110 hover:shadow-lg"
+                className="flex items-center hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
               >
                 <item.icon className="mr-2" />
                 {item.name}
@@ -44,21 +42,21 @@ const Header = () => {
             ))}
             <Link
               to="/login"
-              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 transform hover:scale-110 hover:shadow-lg animate-bounce"
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300"
             >
               <FaSignInAlt className="inline mr-2" />
               Login
             </Link>
             <Link
               to="/signup"
-              className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 transform hover:scale-110 hover:shadow-lg animate-pulse"
+              className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300"
             >
               <FaUserPlus className="inline mr-2" />
               Sign Up
             </Link>
             <button 
               onClick={toggleDarkMode} 
-              className="p-2 rounded-full bg-gray-700 dark:bg-gray-200 text-yellow-400 dark:text-gray-800 hover:bg-gray-600 dark:hover:bg-gray-300 transition duration-300 transform hover:scale-110 hover:rotate-12"
+              className="p-2 rounded-full bg-gray-700 dark:bg-gray-200 text-yellow-400 dark:text-gray-800 hover:bg-gray-600 dark:hover:bg-gray-300 transition duration-300"
             >
               {isDarkMode ? <FaSun className="w-5 h-5" /> : <FaMoon className="w-5 h-5" />}
             </button>
@@ -66,13 +64,13 @@ const Header = () => {
         </div>
 
         {isOpen && (
-          <nav className="md:hidden mt-4 animate-fadeIn">
+          <nav className="md:hidden mt-4">
             <ul className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.link}
-                    className="flex items-center hover:bg-white hover:text-purple-600 px-3 py-2 rounded-md text-base font-medium transition duration-300"
+                    className="flex items-center hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium transition duration-300"
                     onClick={() => setIsOpen(false)}
                   >
                     <item.icon className="mr-2" />
@@ -83,7 +81,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/login"
-                  className="flex items-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-base font-medium transition duration-300 animate-bounce"
+                  className="flex items-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-base font-medium transition duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   <FaSignInAlt className="mr-2" />
@@ -93,7 +91,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/signup"
-                  className="flex items-center bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-base font-medium transition duration-300 animate-pulse"
+                  className="flex items-center bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-base font-medium transition duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   <FaUserPlus className="mr-2" />
